@@ -119,6 +119,10 @@ b = 5 + 2i
 
 a + b = 8 + 6i
 a - b
+
+-----------------
+a = 3 - 4i
+b = -5 + 2i
 class ComplexNumber
 {
 	int real
@@ -130,6 +134,10 @@ new ComplexNumber(3,4)
 1. add
 2. subract
 3. display
+
+---------------------
+
+x = 3 + 5 = 3 add 5 = 3.add(5)
 
 
 
