@@ -14,7 +14,12 @@ public class ComplexNumber {
 	
 	public void display() {
 		// TODO: Handle negative imaginary number
-		System.out.println(this.real + " + " + this.img + "i");
+		if(this.img >= 0) {
+			System.out.println(this.real + " + " + this.img + "i");
+		}else {
+			System.out.println(this.real + " - " + this.img * -1 + "i");
+		}
+		
 	}
 	
 	public ComplexNumber add(ComplexNumber c){
@@ -25,6 +30,23 @@ public class ComplexNumber {
 	}
 	
 	// TODO: minus(), multiply(), isEqual()
+	
+	public ComplexNumber minus(ComplexNumber c){
+		int sr = this.real - c.real;
+		int si = this.img - c.img;
+		ComplexNumber cs = new ComplexNumber(sr, si);
+		return cs;
+	}
+	
+	public boolean isEqual(ComplexNumber c) {
+		
+		if(this.real == c.real && this.img == c.img) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
 	
 	public static void main(String args[]) {
@@ -41,5 +63,8 @@ public class ComplexNumber {
 		
 		ComplexNumber cs = c1.add(c2);
 		cs.display();
+		
+		boolean x = c1.isEqual(c2);
+		System.out.println(x);
 	}
 }

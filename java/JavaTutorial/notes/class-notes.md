@@ -139,7 +139,18 @@ new ComplexNumber(3,4)
 
 x = 3 + 5 = 3 add 5 = 3.add(5)
 
-
+============================================================
+Inheritance(IS-A relation)
+	Student is a Person
+	Teacher is a Person
+	Employee is a Person
+	Cat is an Animal
+	Dog is an Animal
+	
+	
+Aggregation(Has-A relation)
+	Student has a Address
+	Employee has a Address
 
 
 
