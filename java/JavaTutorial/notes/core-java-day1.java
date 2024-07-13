@@ -1,8 +1,12 @@
 -> What is Java?
 -> Why Java?
 ->	JDK(Java Development Kit)
-	JRE(Java Runtime Environment)
+	JRE(Java Runtime Environment) = JVM + Class libraries
 	JVM(Java Virtual machine)
+	
+	[JDK] = [JRE] + [Compilers + Debuggers + JavaDoc]
+	[JRE] = [JVM] + [Class libraries]
+	
 -> How to start?
 	-> Verify if JDK installed?
 		1. Open cmd and run as below:
