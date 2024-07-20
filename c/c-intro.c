@@ -64,7 +64,7 @@ I have 5 kg mango. I will give you 2kg mango.
 C programming
 -------------
 [alphabets, numbers, special characters]
-	-> [Data Types, Variable, Keywords, Operators]
+	-> Tokens[Data Types, Variable, Keywords, Operators]
 		-> [Instructions]
 			->[Program]
 		
