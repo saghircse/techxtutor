@@ -73,14 +73,21 @@ int s = 3 + 5;
 = -> assignment
 
 Types:
-1. Arithmetic operators (+, -, *, /, %)
+1. Arithmetic operators
+	-> Used to perform mathematical calculation.
+	-> (+, -, *, /, %)
 int x = 5;
 x = x + 2;
-2. Assignment operators (=, +=, -=, *=, /=, %=)
+2. Assignment operators
+	-> Used to assign the values for the variables.
+	-> (=, +=, -=, *=, /=, %=)
+	
 x += 2;  // x = x + 2
 x -= 3;  // x = x - 3
 
-3. Relational operators ( ==, <, >, <=, >=, !=)
+3. Relational operators
+	-> Used to compare the value of two variables/constants.
+	-> ( ==, <, >, <=, >=, !=)
 5 == 4 // No/False/0
 5 == 5 // True/1
 5 != 4 // True
@@ -89,7 +96,9 @@ x -= 3;  // x = x - 3
 5 <= 5 // True
 4 <= 5 // True
 
-4. Logical operators ( && , ||,  !)
+4. Logical operators
+	-> Used to perform logical operations like AND, OR and NOT.
+	-> ( && , ||,  !)
 && -> AND
 || -> OR
 ! -> NOT
@@ -120,11 +129,14 @@ Let a = 11 -> 0 && 0 -> False
 Let a = 5 -> 0 && 1 -> False
 Let a = 12 -> 1 && 0 -> False
 Let a = 8 -> 1 && 1 -> True
+
 5. Increment(++)/decrement(--) operators
+	-> Used to either increase or decrease the value of the variable by one.
 Increment(++) : Increases the value of variable by 1
 int a = 5;
 a++; // a = a + 1 -> Post increment
 ++a; // a + a + 1 -> Pre increment
+
 decrement(--) : Decreases the value of variable by 1
 int b = 5;
 b--; // b = b - 1 -> Post decrement
@@ -146,14 +158,55 @@ b -> 9
 Value of a is 4
 Value of b is 9
 
-6. Conditional operators (ternary operators)
-7. Bit wise operators
-8. Special operators (sizeof)
+6. Bit wise operators
+	-> Used to perform bit operations on the given two variables.
+	-> 	& (Bitwise AND), 
+		| (Bitwise OR),
+		~ (Bitwise NOT), 
+		^ (Bitwise XOR), 
+		<< (Left Shift), 
+		>> (Right Shift)
+XOR
+0 ^ 0 => 0
+0 ^ 1 => 1
+1 ^ 0 => 1
+1 ^ 0 => 0
+
+int x = 2; // 10
+int y = 3; // 11
+x & y; // 10 & 11 => 10 => 2
+x | y; // 10 | 11 => 11	=> 3
+~x; // ~10 => 01 => 1
+~y; // ~11 => 00 => 0
+x ^ y; // 10 ^ 11 => 01 => 1
+------
+x < 1; // The bits of x will be left shifted by 1
+x < 2; // The bits of x will be left shifted by 2
+#include <stdio.h>
+int main() {
+    int a=2, b=3;
+    printf("\na AND b = %d", a & b);
+    printf("\na OR b = %d", a | b);
+    printf("\na XOR b = %d", a ^ b);
+    printf("\na << 1 = %d", a << 1);
+    printf("\nb << 2 = %d", b << 2);
+    return 0;
+}	
+	
+bits = 0 or 1
+1 byte = 8 bits
+1 KB (Kilobyte) = 1024 byte
+1 MB (Megabyte) = 1024 KB
+1 GB (Gigabyte)	= 1024 MB
+1 TB (Terabyte) = 1024 GB
+1024 = 2^10
+7. Conditional operators (ternary operators)
+8. Special operators (sizeof(), *, &)
 
 ---------------
 Types of operators based on number of operands:
 1. Binary operators : The operators having 2 operands. (+, -, <=, &&, etc).
-2. Unary Operators : The operators having 1 operand. (!, ++, --)
+2. Unary Operators : The operators having 1 operand. (!, ++, --, ~)
 3. Ternary Operator : The operators having 3 operands. (?:)
 
 
