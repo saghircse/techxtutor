@@ -41,6 +41,16 @@ else if(cond-n)
 else{
 	// when no any above conditions is true
 }
+
+4. Nested if-else
+if(cond-1){
+	if(cond-2){
+	}
+}else{
+	if(cond-3){
+	}else{
+	}
+}
 -------------------------------
 1. Say Hello if a number is even.
 #include<stdio.h>

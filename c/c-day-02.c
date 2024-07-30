@@ -201,6 +201,65 @@ bits = 0 or 1
 1 TB (Terabyte) = 1024 GB
 1024 = 2^10
 7. Conditional operators (ternary operators)
+Syntax of if-else:
+if(condition-x){
+	// when condition-x is true
+}
+else
+{
+	// when condition-x is false
+}
+-------------------------
+<condition-x>? when condition-x is true :  when condition-x is false;
+
+#include<stdio.h>
+int main(){
+	int x,y;
+	printf("Enter two numbers:");
+	scanf("%d%d", &x, &y);
+	
+	// Using if-else
+	if(x>y){
+	    printf("%d is big",x);
+	}else{
+	    printf("%d is big",y);
+	}
+	
+	// Using conditional operator (ternary operand)
+	x>y? printf("%d is big.",x) : printf("%d is big.",y);
+	
+	return 0;
+}
+------------------------
+#include<stdio.h>
+int main(){
+	int x,y;
+	printf("Enter two numbers:");
+	scanf("%d%d", &x, &y);
+	int big = x>y ? x : y;
+	printf("%d is big",big);
+	return 0;
+}
+--------------
+#include<stdio.h>
+int main(){
+	int x,y;
+	printf("Enter two numbers:");
+	scanf("%d%d", &x, &y);
+	printf("%d is big.",x>y ? x : y);
+	return 0;
+}
+----------
+#include<stdio.h>
+int main(){
+	int x;
+	printf("Enter a number:");
+	scanf("%d", &x);
+	(x%2==0)? printf("%d is even.",x) : printf("%d is odd.",x);
+	return 0;
+}
+
+
 8. Special operators (sizeof(), *, &)
 
 ---------------
