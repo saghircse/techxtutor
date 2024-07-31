@@ -1,0 +1,82 @@
+Programming Language
+--------------------
+
+Program : A set of instructions for a computer to execute.
+Language : Medium of communication
+--------------------
+[E]	<-> [E] => Yes
+[A] <->	[A]	=> Yes
+[E] <->	[A]	=> No
+[E]	<-> [E+A] <-> [A]
+[E]	<-> [E+F] <-> [F+A] <-> [A]
+--------------------
+E,A,H -> Natural/Human Language
+
+Computer -> Binary Language (0101110101)
+00 -> 0 
+01 -> 1
+10 -> 2
+11 -> 3
+---------------------
+Levels of Language
+1. Low Level Language : Closer to machine language
+	a. Machine Language : 
+		-> Consists of binary code(0s and 1s)
+		-> Computer Hardware can directly execute.
+		-> Difficult to read and write by Humans.
+	b. Assembly Language
+		-> Mnemonics - symbolic names of instructions
+		-> Eg- ADD R1 R2, SUB R3 R4, MOV X R1
+		-> Assembler - Traslator that covert assembly language to machine language. 
+2. High Level Language (Java, Scala, Python) : Close to human language
+	-> Easy for human to read and write
+	-> Translators:
+		-> Compiler - Translates all the instructions in a program at once.
+			-> Java, Scala
+		-> Interpretor - Translates one instruction at time.
+			-> Python
+---------------------------
+Human 
+---------------------------
+Scala : Scala is high level programming language. It uses compiler.
+	-> HLL
+	-> Compiler based
+	-> Object Oriented
+	-> Compatible with Java
+---------------------------
+
+Process of learning language:
+[Alphabets, Numbers, Symbols]
+	-> Words
+		-[Grammer]-> Sentence -> Paragraph
+
+[Alphabets, Numbers, Symbols]
+	-> Tokens (data type, variables, constant, keywords, operators )
+		-[Syntax]-> Instructions
+			-> Program
+------------
+Step-1: Java
+	java -version
+	javac -version
+Step-2: Download Scala IDE - Eclipse
+https://scala-ide.org/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
