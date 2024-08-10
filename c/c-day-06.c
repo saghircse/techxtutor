@@ -73,4 +73,69 @@ int main() {
     return 0;
 }
 
+-----------------------------------
+Q4. Write a program to print odd number between two given numbers.
+#include <stdio.h>
+int main() {
+    int m,n;
+    printf("Enter two number:");
+	scanf("%d%d",&m,&n);
+    for(int i=m; i <= n; i++)
+    {
+        if(i%2 != 0){
+          printf("%d ", i);  
+        }
+    }
+    return 0;
+}
+---------------------------------
+Q5. Write a program to find the sum of all numbers between two given numbers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,88 @@
+1. Hello World Program
+-----------Scala-------------
+object HelloWorld {
+	def main(args: Array[String]): Unit = {
+		println("Hello, World!")
+	}
+}
+
+HelloWorld - Object name. It can be anything.
+main - Method name. The main method is entry point of the program.
+println - It is also a method used to display anything on the screen.
+args - Name of array variable.
+object, def, Unit, Array, String = Keywords
+
+-----------Java-------------
+class HelloWorld {
+	public static void main(String args[]){
+		System.out.println("Hello, World!");
+	}
+}
+-----------C--------------
+#include<stdio.h>
+int main(){
+	printf("Hello, World!");
+	return 0;
+}
+
+=======================================================
+Computer : CPU, RAM, DISKS/SSD
+RAM = Random Access Memory. It is volatile.
+
+Integer : ...,-2,-1,0,1,2,3...
+Floating point number : 
+	-> Numbers with decimal. 
+	-> 5.6, 8.9998
+
+=======================================================
+object HelloWorld {
+	def main(args: Array[String]): Unit = {
+		var a : Int = 10;
+		var b : Int = 8;
+		var s = a + b;
+		val d = a - b;
+		println("Sum = "+s);
+		println("Difference = "+d);
+	}
+}
+In memory:
+a[10] , b[5]
+s[15]
+
+Variable : It the name of memory location where data is stored.
+	Example: a, b, s
+Constant : 10, 5
+Operator : It performs some operation on one or more operands.
+3 + 5
+10 - 7
+3,5 -> operands of +
+10,7 -> operands of -
+-, + -> operator
+
+= is an assignment operator. 
+	-> It assign the value of its right operand to its left operand.
+--------------------
+Datatype : Type of data. It can be char, int, float, etc.
+-------------------------
+1. Write a program to perform arithmetic operatons(+,-,*,/,%) on two integers.
+
+============================
+Keywords : 
+	-> Reserved words that are used for some internal process or specific actions.
+	-> Example: object, def, var
+Identifier : 
+	-> It is used for identification purpose. 
+	-> Name given to variable, method, object or class is called identifier.
+Datatype : 
+	-> It is type of value which a varible can store.
+	-> Example: Int, Double, Bool, Char, etc.
+Variable : 
+
+
+
+
+
+
+
+
+ 

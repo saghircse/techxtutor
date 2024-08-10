@@ -41,8 +41,9 @@ Human
 Scala : Scala is high level programming language. It uses compiler.
 	-> HLL
 	-> Compiler based
-	-> Object Oriented
-	-> Compatible with Java
+	-> Object Oriented (class, object)
+	-> Functional programming
+	-> Interoperable with Java
 ---------------------------
 
 Process of learning language:
@@ -53,13 +54,16 @@ Process of learning language:
 [Alphabets, Numbers, Symbols]
 	-> Tokens (data type, variables, constant, keywords, operators )
 		-[Syntax]-> Instructions
-			-> Program
+						-> Program
 ------------
 Step-1: Java
 	java -version
 	javac -version
 Step-2: Download Scala IDE - Eclipse
 https://scala-ide.org/
+
+IDE : Integrated Development Environment
+Java, Scala : Eclipse, IntelliJ
 
 
 
