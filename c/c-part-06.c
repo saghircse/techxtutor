@@ -183,9 +183,58 @@ int main() {
     }
     return 0;
 }
-
 Q9. Check if a number is prime or not.
-Q10. Print the following patterns.
+
+Logic : 
+1. Divide n by numbers from 2 to n-1
+2. If n is not divisble by any of the numbers b/n 2 to n-1, 
+	-> then n is prime
+	-> Otherwise, n is not prime
+
+#include<stdio.h>
+int main() {
+    int n;
+    printf("Enter number: ");
+    scanf("%d", &n);
+	int x = 2;
+	int isDivided;
+	while(x <= n-1){
+		if(n%x == 0){
+			isDivided=1;
+			break; // come out of the loop if n is divided by x - no need to check furthur.
+		}else{
+			isDivided=0;
+		}
+		x++;
+	}
+	
+	if(isDivided==1){
+		printf("\n%d is not prime.", n);
+	}else{
+		printf("\n%d is prime.", n);
+	}
+	return 0;
+}
+-----------
+n=25
+x=2 -> isDivided=0
+x=3 -> isDivided=0
+x=4 -> isDivided=0
+x=5 -> isDivided=1  <--- stop (break)
+25 is not a prime.
+-----------
+n=5
+x=2 -> isDivided=0
+x=3 -> isDivided=0
+x=4 -> isDivided=0
+x=5 X
+5 is prime.
+-----------
+
+Q10. Find the sum digits of a number.
+348 
+sum of digits = 3+4+8
+Q11. Print the following patterns.
 ---------a------
 n=5
 *
