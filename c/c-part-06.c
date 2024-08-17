@@ -232,8 +232,23 @@ x=5 X
 -----------
 
 Q10. Find the sum digits of a number.
-348 
 sum of digits = 3+4+8
+n : 348 -> 348/10 = 34 -> 34/10 = 3 -> 3/10 = 0
+r : 348%10 = 8, 34%10 = 4, 3%10 = 3
+s : 0 -> 
+		0 + 8 = 8 
+			-> 8+4=12
+				-> 12 + 3 =15
+-------
+int n, sum=0, r;
+n<-scanf
+while(n>0){
+	r = n%10;
+	sum = sum + r;
+	n = n / 10; 3
+}
+printf("Sum of digits = %d",sum );
+
 Q11. Print the following patterns.
 ---------a------
 n=5
@@ -242,7 +257,47 @@ n=5
 ***
 ****
 *****
-
+for(int i=1;i<=n;i++){
+	for(int j=1;j<=i;j++){
+		print("*");
+	}
+	printf("\n")
+}
+Enter number: 3
+n=3
+---------------
+i=1 -> i<=n True
+	j=1 j<=i True - print *
+	j=2 j<=i false
+	print \n
+i=2 -> i<=n True
+	j=1 j<=i True - print *
+	j=2 j<=i True - print *
+	j=3 j<=i false
+	print \n
+i=3 -> i<=n True
+	j=1 j<=i True - print *
+	j=2 j<=i True - print *
+	j=3 j<=i True - print *
+	j=4 j<=i false
+i=4 -> i<=n False
+---------------
+*
+**
+***
+----------------
+*****
+****
+***
+**
+*
+for(int i=1;i<=n;i++){
+	for(int j=n;j>=i;j--){
+		print("s");
+	}
+	printf("\n")
+}
+-------------------
 1
 22
 333
@@ -258,11 +313,77 @@ n=4
   **
  ***
 ****
+// Outer loop to print line
+for(int i=1;i<=n;i++){
+	// Inner Loop to print space for each line
+	for(int j=n;j>=i;j--){
+		print("s");
+	}
+	
+	// Inner Loop to print star for each line
+	for(int j=1;j<=i;j++){
+		print("*");
+	}
+	printf("\n")
+}
 ---------c------
-   *
-  ***
- *****
-*******
+    *
+   ***
+  *****
+ *******
+*********
+n=5
+i=1 
+	space: 5
+	star:1 = 2*i-1 = 1
+i=2 
+	space: 4
+	star:3 = 2*i-1 = 3
+i=3
+	space:3
+	star:5 = 2*i-1 = 5
+i=4
+	space:2
+	star:7
+i=5
+	space:1
+	star:9
+===================================================
+3. break and continue
+https://www.google.com/imgres?q=break%20vs%20continue%20in%20c&imgurl=https%3A%2F%2Fd3kfrrhrj36vzx.cloudfront.net%2Fimages%2F1669743977276_21qplvg4.jpg&imgrefurl=https%3A%2F%2Fwww.krayonnz.com%2Fuser%2Fdoubts%2Fdetail%2F62a022d29a140200511a3900%2Fwhat-is-the-difference-between-break-and-continue-statements&docid=-wulhTXvtYXf5M&tbnid=R_mUl3Ko2Zt5XM&vet=12ahUKEwjQl6vkqPuHAxXZzjgGHRyDAyYQM3oECCUQAA..i&w=976&h=520&hcb=2&ved=2ahUKEwjQl6vkqPuHAxXZzjgGHRyDAyYQM3oECCUQAA
+break : 
+	-> Used to jump out of switch statement.
+	-> Used to jump out of loop 
+for(int i=0; i<10;i++){
+    if(i==4){
+        break; // jump out of loop
+    }
+	printf("%d ", i);
+}	
+
+Output : 0 1 2 3
+
+continue : 	
+1. Example-1
+for(int i=0; i<10;i++){
+    if(i==4){
+        continue; // skip next statements in the loop and continue to next iteration.
+    }
+	printf("%d ", i);
+}	
+Output : 0 1 2 3 5 6 7 8 9
+
+2. Example-2
+// Do  not print even number greater than 5
+    for(int i=0; i<10;i++){
+        if(i>5 && i%2==0){
+            continue;
+        }
+	    printf("%d ", i);
+    }	
+Output : 0 1 2 3 4 5 7 9	
+	
+	
 
 
 
