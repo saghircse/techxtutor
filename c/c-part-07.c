@@ -47,10 +47,95 @@ intialization:
 datatype arrayName[] = {value1, value2,...,valueN};
 
 ---------------------------
-int nums[5] = {1,5,3,2,8};
-int nums[] = {1,5,3,2,8}; // Takes size of array from the numbers of values
+int nums[10] = {1,5,3,2,8};
+printf("%d", nums[3]); // 2
+printf("%d", nums[4]); // 8
+printf("%d", nums[5]); // 0
+printf("%d", nums[9]); // 0
+printf("%d", nums[10]); // gives garbage value in C
+
+int nums2[] = {1,5,3,2,8}; // By default takes size as 5 from the numbers of values
+printf("%d", nums2[3]); // 2
+printf("%d", nums2[4]); // 8
+printf("%d", nums2[5]); // gives garbage value in C
+printf("%d", nums2[9]); // gives garbage value in C
+printf("%d", nums2[10]);// gives garbage value in C
 --------------------------------
 
+How to find size of an array?
+	int nums[5] = {1,5,3,2,8};
+    printf("One array element size in bytes : %d\n", sizeof(nums[0]));
+    printf("Array size in bytes : %d\n", sizeof(nums));
+    int size = sizeof(nums)/sizeof(nums[0]);
+    printf("Array size(total element) :%d \n", size);
+Output:
+One array element size in bytes : 4
+Array size in bytes : 20
+Array size(total element) :5 
 
 
+Q1. Write a program print all the numebrs in an array.
+
+int nums[5]={2,3,1,8,7};
+printf("%d ", nums[0]);
+printf("%d ", nums[1]);
+printf("%d ", nums[2]);
+printf("%d ", nums[3]); 
+printf("%d ", nums[4]);
+
+for(int i=0; i<5; i++){
+	printf("%d ", nums[i]);
+}
+
+Q2. Write a program read N numbers in an array and then print all.
+Take number of elements as input N
+Read N numbers of elements.
+Print all N numbers.
+#include <stdio.h>
+int main() {
+    int N, nums[100];
+    printf("Enter number of elements:");
+    scanf("%d", &N); // 5
+    
+    printf("Enter all %d elements:\n", N);
+    for(int i=0; i<N; i++){
+        scanf("%d", &nums[i]); // 5 8 7 3 2
+    }
+    
+    printf("Array elements: ");
+    for(int i=0; i<N; i++){
+        printf("%d ", nums[i]);
+    }
+    return 0;
+}
+
+Q.3 Write a program to find the total sum, even sum and odd sum of all elements in an array.
+Q.4 Write a program to search an element in an array.
+Q.5 Sort an array
+// 5 8 7 3 2
+// 2 3 5 7 8 <-- Sorted in ascending order
+
+--------------------------2D array----
+3 5 7
+2 6 9
+1 0 8
+
+3*3 = 9
+------
+3 5 7
+2 6 9
+
+2*3 = 6
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
