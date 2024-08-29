@@ -40,7 +40,7 @@ object HelloWorld {
 		var a : Int = 10;
 		var b : Int = 8;
 		var s = a + b;
-		val d = a - b;
+		var d = a - b;
 		println("Sum = "+s);
 		println("Difference = "+d);
 	}
@@ -64,8 +64,6 @@ Operator : It performs some operation on one or more operands.
 --------------------
 Datatype : Type of data. It can be char, int, float, etc.
 -------------------------
-1. Write a program to perform arithmetic operatons(+,-,*,/,%) on two integers.
-
 ============================
 Keywords : 
 	-> Reserved words that are used for some internal process or specific actions.
@@ -77,6 +75,106 @@ Datatype :
 	-> It is type of value which a varible can store.
 	-> Example: Int, Double, Bool, Char, etc.
 Variable : 
+	-> Used to store values
+	-> Two types: 
+		1. Mutable variable
+			-> Value can be changed.
+			-> var keyword is used to declare mutable variable.
+			var rollx = 25
+			rollx = 10 
+		2. Immutable variable
+			-> Value can not be changed.
+			-> val keyword is used to declare Immutable variable.
+			val rolly = 25
+			rolly = 10 // Gives error - can't change immutable variable.
+			
+object HelloX {
+	def main(args: Array[String]): Unit = {
+	  
+	  // Mutable variable - value can be changed
+	  var rollx = 25
+	  println("The value of rollx : "+ rollx)
+	  
+	  rollx = 10
+	  println("The value of rollx : "+ rollx)
+	  
+	  // Immutable variable - value can not be changed
+	  val rolly = 25
+	  println("The value of rollx : "+ rolly)
+	  
+	  //rolly = 10 // error: reassignment to val
+	  println("The value of rollx : "+ rolly)
+	  
+	}
+}	
+
+===================================================================
+Operators:
+	-> Used to perform operations on variables and values.
+	var x = 5
+	var y = x + 3
+Types of operators:
+1. Arithmetic Operators (+, -, *, /, %)
+/ Division
+% modulus - It gives remainder.
+
+10/5 -> 2
+10%5 -> 0
+
+11/2 -> 5
+11%2 -> 1
+
+2. Assignment Operators (=, +=, -=, *=, /=, %=)
+var x = 5
+x = x + 3
+------------
+var x = 5
+x +=3
+
+----------------
+1. Write a program to perform arithmetic operations(+,-,*,/,%) on two integers.
+2. Swap the value of two variable.
+
+var x = 5
+var y = 7
+
+var z = x 	// x:5, y:7, z:5
+x = y		// x:7, y:7, z:5
+y = z		// x:5, y:5, z:5
+object HelloX {
+	def main(args: Array[String]): Unit = {
+	  
+	  var x = 5
+    var y = 7
+	  println("Before swap =>")
+	  println("Value of x :"+x)
+	  println("Value of y :"+y)
+	  
+	  var z = x 
+	  x = y 
+	  y = z
+	  
+	  println("After swap =>")
+	  println("Value of x :"+x)
+	  println("Value of y :"+y)
+	  
+	}
+}
+3. Swap the value of two variable without using 3rd variable.
+
+
+
+
+
+
+		
+
+
+		
+			
+			
+			
+			
 
 
 

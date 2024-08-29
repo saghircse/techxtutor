@@ -65,6 +65,8 @@ https://scala-ide.org/
 IDE : Integrated Development Environment
 Java, Scala : Eclipse, IntelliJ
 
+Online compiler : https://onecompiler.com/scala
+
 
 
 
