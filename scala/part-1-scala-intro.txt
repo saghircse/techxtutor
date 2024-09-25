@@ -109,103 +109,8 @@ object HelloX {
 }	
 
 ===================================================================
-Operators:
-	-> Used to perform operations on variables and values.
-	var x = 5
-	var y = x + 3
-Types of operators:
-1. Arithmetic Operators (+, -, *, /, %)
-/ Division
-% modulus - It gives remainder.
 
-10/5 -> 2
-10%5 -> 0
-
-11/2 -> 5
-11%2 -> 1
-
-2. Assignment Operators (=, +=, -=, *=, /=, %=)
-var x = 5
-x = x + 3 // Add x and 3, then assign to x
-------------
-var x = 5
-x += 3 // Same as x = x + 3
-
-3. Relational/Comparison Operators
-	-> Used for comparison of two variables or values.
-	-> They return either true or false.
-	->	Equal To (==)
-		Not Equal (!=)
-		Greater Than (>)
-		Less Than (<)
-		Greater Than or Equal To (>=)
-		Less Than or Equal To (<=)
-val a = 5
-val b = 8
-
-a == b // False
-a != b // True
-a > b	// False
-a < b 	// True
-a >= b	// False
-a <= b	// True
-a < a	// False
-a == a	// True
-a <= a	//True
-
-object HelloWorld {
-	def main(args: Array[String]): Unit = {
-	  val a = 5
-	  val b = 8
-	  
-	  val et = a == b
-	  val net = a != b
-	  val lt = a < b
-    val gt = a > b	  
-	  val ltet = a <= b
-	  val gtet = a >= b
-	 
-	  println("a == b = " + et) 
-	  println("a != b = " + net) 
-	  println("a < b = " + lt) 
-	  println("a > b = " + gt) 
-	  println("a <= b = " + ltet) 
-	  println("a >= b = " + gtet) 
-	 
-	}
-}
-
-Output:
-
-a == b = false
-a != b = true
-a < b = true
-a > b = false
-a <= b = true
-a >= b = false
-
-----------------
-1. Write a program to perform arithmetic operations(+,-,*,/,%) on two integers.
-object HelloWorld {
-	def main(args: Array[String]): Unit = {
-	  val a = 20
-	  val b = 6
-	  
-	  val sum = a + b
-	  val dif = a - b
-	  val mul = a * b
-	val div = a / b	  
-	  val rem = a % b // gives remainder
-	 
-	  println("a + b = " + sum) 
-	  println("a - b = " + dif) 
-	  println("a * b = " + mul) 
-	  println("a / b = " + div) 
-	  println("a % b = " + rem) 
-	 
-	}
-}
-2. Swap the value of two variable.
+1. Swap the value of two variable.
 
 var x = 5
 var y = 7
@@ -232,7 +137,7 @@ object HelloX {
 	  
 	}
 }
-3. Swap the value of two variable without using 3rd variable.
+2. Swap the value of two variable without using 3rd variable.
 
 
 

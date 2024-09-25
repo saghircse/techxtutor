@@ -383,7 +383,76 @@ Output : 0 1 2 3 5 6 7 8 9
     }	
 Output : 0 1 2 3 4 5 7 9	
 	
-	
+===================================
+1
+4 9
+16 25 36
+49 64 81 100
+--------------
+
+int main(){
+	int n=3; // scanf
+	int x=1;
+	for(int i=1; i<=n; i++)
+	{
+		for(int j=1; j<=i; j++){
+			printf("%d",x*x);
+			x++;
+		}
+		printf("\n");
+	}
+	return 0;
+}
+x=1 -> 2
+Dry run:
+--------
+i=1 -> i<=n Yes
+	j=1 -> j<=i -> Yes 1, x=2
+	j=2 -> j<=i -> No -> Out of inner loop
+i=2 -> i<=n Yes
+	j=1 -> j<=i -> Yes 2 x=3
+	j=2 -> j<=i -> Yes 3 x=4
+	j=3 -> j<=i -> No -> Out of inner loop
+i=3 -> i<=n Yes
+	j=1 -> j<=i -> Yes 4 x=5
+	j=2 -> j<=i -> Yes 5 x=6
+	j=3 -> j<=i -> Yes 6 x=7
+	j=4 -> j<=i -> No -> Out of inner loop
+i=4 -> i<=n No -> out of outer loop
+==========================================
+// Online C compiler to run C program online
+/*
+1
+2 3
+4 5 6
+7 8 9 10
+4 5 6
+2 3
+1
+*/
+#include <stdio.h>
+int main() {
+    int n=5, c=0;
+    // For the first half
+    for(int i=1; i<=n; i++){ // i=1,2,3,4
+        for(int j=1; j<=i; j++){
+            c++;
+            printf("%d ", c);
+        }
+        printf("\n");
+    }
+    // For the second half
+    int x;
+    for(int i=n-1; i>=1; i--){ // i=3,2,1
+        x = i*(i+1)/2 - i + 1;
+        for(int j=1; j<=i; j++){
+            printf("%d ",x);
+            x++;
+        }
+        printf("\n");
+    }
+    return 0;
+}	
 
 
 

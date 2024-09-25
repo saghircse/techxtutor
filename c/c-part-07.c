@@ -8,6 +8,12 @@ Array:
 	-> Fixed or constant size
 	-> Contiguous memory allocation
 	
+	int x = 5; x(binary of 5) 445500 <- 4 bytes
+	int a[3]; --> 3*4=12 bytes -->  10001, 10002,.....,10012 // 12 bytes
+	a[0] --> 10001,..,10004 // 4 bytes
+	a[1] --> 10005,..,10008 // 4 bytes
+	a[2] --> 10009,..,10012 // 4 bytes
+	
 int a1=5;
 int a2=3;
 int a3=4;
