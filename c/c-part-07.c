@@ -116,6 +116,32 @@ int main() {
 }
 
 Q.3 Write a program to find the total sum, even sum and odd sum of all elements in an array.
+#include <stdio.h>
+int main() {
+    int N, nums[10];
+    printf("Enter number of elements:");
+    scanf("%d", &N); // 5
+    
+    printf("Enter all %d elements:\n", N);
+    for(int i=0; i<N; i++){
+        scanf("%d", &nums[i]); // 5 8 7 3 2
+    }
+    int total_sum = 0;
+    int even_sum = 0;
+    int odd_sum= 0;
+    for(int i=0; i<N; i++){
+        total_sum = total_sum + nums[i];
+        if(nums[i] % 2 == 0){
+           even_sum = even_sum + nums[i]; 
+        }else{
+            odd_sum = odd_sum + nums[i];
+        }
+    }
+    printf("\nTotal Sum: %d", total_sum);
+    printf("\nEven Sum: %d", even_sum);
+    printf("\nOdd Sum: %d", odd_sum);
+    return 0;
+}
 Q.4 Write a program to search an element in an array.
 Q.5 Sort an array
 // 5 8 7 3 2
