@@ -87,8 +87,6 @@ int main(){
 	
 	return 0;
 }
-
-
 int largestNum(int a, int b, int c)
 {
     int big;
@@ -104,13 +102,7 @@ int largestNum(int a, int b, int c)
 
 void printReverseOfNum(int x)
 {
-	int rn=0,r,n=x;
-	while(n>0)
-	{
-		r = n%10;
-		rn = rn*10 + r;
-		n = n/10;
-	}
+	int rn=reverseOfNum(x);
 	printf("\nReverse of %d is %d",x,rn );
 }
 
@@ -129,3 +121,13 @@ int reverseOfNum(int x)
 Question-1:
 Write a program to find the sum of all the prime in a range.
 	-> Use function when required.
+	
+Question-2:
+Create a program with multiple functions, such as a calculator that 
+performs basic arithmetic operations(+,-,*,/,%, power).
+
+Question-3:
+Write a program to compute the sum of series 1/1! + 1/2! + 1/3! + ..+ 1/n!
+
+Question-4:
+Write a program to compute the sum of series 1^2/1! + 2^2/2! + 3^2/3! + ..+ n^2/n!
