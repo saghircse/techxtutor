@@ -65,7 +65,15 @@ Variety of function:
     => int cubeSum(int,int)
 4. No any input, but returns value 
     => int main()
-
+------------------------
+Types of function:
+1. Inbuilt function:
+	printf(), scanf() from stdio.h
+	pow(), sqrt() from math.h
+	
+2. Custom/User defined function : 
+	sayHello(), reverseOfNum()
+-------------------------
 Program 1:
 #include <stdio.h>
 void printReverseOfNum(int x);
@@ -131,3 +139,6 @@ Write a program to compute the sum of series 1/1! + 1/2! + 1/3! + ..+ 1/n!
 
 Question-4:
 Write a program to compute the sum of series 1^2/1! + 2^2/2! + 3^2/3! + ..+ n^2/n!
+
+Question-5:
+Write a program to compute the sum of series 1^2/1! - 2^2/2! + 3^2/3! - .. n^2/n!
