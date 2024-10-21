@@ -55,3 +55,43 @@ void sumOfSeriesX(int n){
 	for(int i=1; i<=n; i++){
 		sumx = sumx + i*i/fact(i);
 	}
+==========================================================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+// Series-1: 1 + 2 + 3 +...+ n
+void sumOfSeries1(int n); // Function declaration
+
+// Series-2: 1/1 + 1/2 + 1/3 +...+ 1/n
+void sumofSeries2(int n); // Function declaration
+
+// Series-3: 1/1 - 1/2 + 1/3 -... 1/n
+
+void sumofSeries2(int n) //Function defination
+{
+  float i,sum=0;
+  for(i=1;i<=n,i++){
+    sum=sum+(1/i);
+  }
+  printf("Sum of series2 is %f ",sum);
+}
+
+int main() {
+    int n;
+    printf("Enter number of terms:");
+    scanf("%d",&n);
+    sumOfSeries1(n);
+    sumofSeries2(n);
+    return 0;
+}
+
+void sumOfSeries1(int n)  // Function Definition
+{ 
+    int sum=0;
+    for(int i=1; i<=n; i++){
+        sum = sum + i;
+    }
+    printf("\nSum of Series1 is %d", sum);
+}
+
+

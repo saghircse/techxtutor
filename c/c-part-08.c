@@ -142,3 +142,85 @@ Write a program to compute the sum of series 1^2/1! + 2^2/2! + 3^2/3! + ..+ n^2/
 
 Question-5:
 Write a program to compute the sum of series 1^2/1! - 2^2/2! + 3^2/3! - .. n^2/n!
+
+=================================
+Loop : 
+Iterate over a set of instructions agains and again until a certain condition is met.
+
+Recursion Function : 
+	-> The function which calls itself again and again until a certain condition is met.
+	-> All the program which can solved using loop can also be solved using recursion.
+	-> All the function calls are stored in stack.
+	
+5! = 5 * 4 * 3 * 2 * 1 = 1 * 2 * 3 * 4 * 5
+
+Using Loop:
+int fact(int n){
+	int f=1;
+	for(int i=1; i<=n; i++){
+		f = f * i;
+	}
+	return f;
+}
+
+Using recursion:
+fact(n) = n * fact(n-1)
+main()
+->fact(5) 
+	-> 5 * fact(4)
+		-> 4 * fact(3)
+			-> 5 * 4 * 3 * fact(2)
+				-> 5 * 4 * 3 * 2 * fact(1)
+					-> 5 * 4 * 3 * 2 * 1 * fact(0)
+						-> 5 * 4 * 3 * 2 * 1 * 1
+
+
+int fact(int n){
+	// base condition
+	if(n==0){
+		return 1;
+	}
+	return n * fact(n-1);
+}
+int main() {
+    int n=5;
+    int f = fact(n);
+    printf("Fact of %d = %d", n, f);
+    return 0;
+}
+
+-------------
+Queue : 
+	-> FIFO (First In First Out)
+	-> People in the queue at ticket counter
+	
+Stack:
+	-> LIFO (last In First Out)
+	-> Stack of plates or books
+	-> Function calls
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -50,6 +50,8 @@ n --> n times in worst case
 	-> Works on sorted data
 	-> Divide and concur
 	
+2.1 Binary search using recursion
+	
 total numbers:
 2 3 5 7 9 
 Level : medium
