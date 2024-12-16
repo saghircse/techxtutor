@@ -1,5 +1,5 @@
-POINTER IN C
--------------
+							|	POINTER IN C	|
+							*-------------------*
 Pointer:
 	-> It is variable that holds the address of another variable.
 
@@ -79,3 +79,49 @@ ar -> 2221 = &ar[0]
 *(ar + 2) -> 3 -> ar[2]
 *(ar + 3) -> 2 -> ar[3]
 *(ar + 4) -> 1 -> ar[4]
+=======================================================
+
+In C programming, a variable's memory address is a numerical representation of the location in a computer's memory where the variable is stored. The memory address is in hexadecimal form, such as 0x... 
+To access a variable's memory address in C, you can use the reference operator (&). For example, if you have a variable called myAge that contains the value 43, you can use the following code to output its memory address:
+int myAge = 43;
+printf("%p", &myAge); // Outputs 0x7ffe5367e044 
+The expression &myAge is often called a "pointer". A pointer stores the memory address of a variable as its value. The type of the pointer must match the type of the variable being used. 
+The format of a memory address can vary depending on the system's architecture and endianness. 
+Variables are usually stored in RAM, either on the heap or on the stack. Global variables are usually stored on the heap, while variables declared within a function or method are usually stored on the stack. 
+
+
+========================================
+#include <stdio.h>
+void swap(int* a, int* b);
+int main(){
+	int a=5, b=8;	
+	printf("\nBefore swapping: a=%d and b=%d", b,a);
+	swap(&a,&b);
+	printf("\nAfter swapping: a=%d and b=%d", a,b);
+	return 0;
+}
+void swap(int* pa, int* pb)
+{
+	int c;
+	c = *pa;
+	*pa = *pb;
+	*pb = c;
+}
+
+
+=========================================
+
+Memory allocation:
+1. Static memory allocation
+	-> Memory allocated can not be changed during runtime.
+int a; // 4 bytes
+int ar[100]; // 100 * 4 = 400 bytes
+
+
+2. Dynamic memory allocation
+	-> Memory allocated can be changed during runtime.
+	-> C provides 4 library function defined in <stdlib.h>
+		1. malloc()
+		2. calloc()
+		3. free()
+		4. realloc()
