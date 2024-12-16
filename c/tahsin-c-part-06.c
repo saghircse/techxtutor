@@ -75,7 +75,7 @@ int main() {
     return 0;
 }
 
-Q4. Write a program find the following in a range (b/n start and end)
+Q5. Write a program find the following in a range (b/n start and end)
 a. total sum
 b. even sum (sum of even numbers)
 c. odd sum (sum of odd numbers)
@@ -92,5 +92,7 @@ int main() {
     return 0;
 }
 
+Q6. Write a program find factorial of a number.
 
+5! = 5*4*3*2*1 = 1*2*3*4*5
 
