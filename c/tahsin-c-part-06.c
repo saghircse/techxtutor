@@ -9,13 +9,35 @@ Loop:
 2. while loop
 3. do while loop
 
-for loop syntex:
-----------------
+1. for loop syntex:
+-------------------
 
 for(Initialization ; Condition ; Change)
 {
-	
+	// block
 }
+
+2. while loop syntex:
+---------------------
+Initialization
+while(Condition)
+{
+	// block
+	
+	Change
+}
+
+=> Entry controlled loop
+
+3. do while loop syntax
+-----------------------
+Initialization
+do{
+	// block
+	Change
+}while(condition);
+
+=> Exit controlled loop 
 
 Q1. Write a program to print "Hello" n times.
 
@@ -29,6 +51,21 @@ int main() {
     }
     return 0;
 }
+
+// Using while loop
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a number:");
+    scanf("%d", &n);
+	int i=1;
+	while(i<=n){
+		printf("\nHello");
+		i++;
+	}
+    return 0;
+}
+
 --------------------------------------
 Enter a number:5
 
@@ -48,6 +85,18 @@ Hello
 6. i++, i->6, i<=5 => False ---> Exit(out of loop)
 
 Q2. Write a program to print numbers from 1 to n.
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a number:");
+    scanf("%d", &n);
+	int i=1;
+	while(i<=n){
+		printf("%d",i);
+		i++;
+	}
+    return 0;
+}
 
 Q3. Write a program to print numbers in a range (b/n start and end)
 #include <stdio.h>
@@ -55,7 +104,8 @@ int main() {
     int s,e;
     printf("Enter start and end number:");
     scanf("%d%d", &s, &e);
-    for(int i=s; i<=e; i++){
+	int i;
+    for(i=s; i<=e; i++){
 	    printf("%d\n",i);
     }
     return 0;
@@ -95,4 +145,18 @@ int main() {
 Q6. Write a program find factorial of a number.
 
 5! = 5*4*3*2*1 = 1*2*3*4*5
+
+
+Q7. Write a program to find reverse of a number. Also check if the number is palindrome or not.
+n=12345
+r=54321
+
+n=13231
+r=12231
+
+if(n==r){
+	//palindrome
+}
+
+Q8. Check if a number is prime or not.
 
