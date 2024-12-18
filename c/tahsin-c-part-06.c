@@ -146,17 +146,64 @@ Q6. Write a program find factorial of a number.
 
 5! = 5*4*3*2*1 = 1*2*3*4*5
 
+Q7. Check if a number is prime or not.
 
-Q7. Write a program to find reverse of a number. Also check if the number is palindrome or not.
+Q8. Write a program to find reverse of a number. 
 n=12345
-r=54321
+rn=54321
 
 n=13231
-r=12231
-
-if(n==r){
+rn=12231
+Also check if the number is palindrome or not.
+if(n==rn){
 	//palindrome
 }
+---------------------------------------------------
+n=123
+rn=0
+----
+r=n%10; --> 3
+rn = rn*10+r --> 3
+n=n/10 ---> 123/10=12
+----
+r=n%10 ---> 12%10 = 2
+rn = rn*10+r ---> 3*10+2=32
+n=n/10 ---> 12/10=1
+----
+r=n%10 ---> 1%10 = 1
+rn = rn*10+r = 32*10+1 = 321
+n=n/10 ---> 1/10=0
 
-Q8. Check if a number is prime or not.
+#include <stdio.h>
+int main() {
+    int n,rn=0,r;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    int tn=n;
+    while(n>0){
+	    r=n%10;
+	    rn = rn*10+r;
+	    n=n/10;
+    }
+    printf("Reverse of %d is %d",tn,rn);
+    
+    if(tn==rn){
+        printf("\n%d is palindrome.", tn);
+    }else{
+        printf("\n%d is not palindrome.", tn);
+    }
+    return 0;
+}
+
+---------------
+Q9. Write a program to find number of digits in a number.
+1435 ---> 4
+345090 ---> 6
+Q10. Write a program to print english word of all digits in number.
+123 -> One Two Three
+150 -> One Five Zero
+
+
+
+Q100. Find all combination of 3 digit number using digits from 0 to 9.
 
