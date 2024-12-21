@@ -33,7 +33,7 @@ Basic operation in Stack:
 4. isEmpty()
 5. isFull()
 
-#define MAXSIZE 5
+define MAXSIZE 5
 int stack[MAXSIZE];
 int TOP = -1;
 
@@ -79,7 +79,7 @@ void push(int x){
 int pop(){
 	if(TOP==-1){
 		printf("\nStack is empty.");
-		return -1;
+		return -1; // To denote stack empty
 	}else{
 		int x = stack[TOP];
 		TOP--;
@@ -99,6 +99,26 @@ int peek(){
 	}
 }
 
+------------
+MAXSIZE=5
+1>
+stack[]
+TOP=-1;
+1.1>
+push(5);
+stack[5]
+TOP=0
+2>
+push ->4,1,2,6
+stack[5,4,1,2,6]
+TOP=4 (from index 0 to 4)
+display() -> 5 4 1 2 6
+-------
+pop()
+stack[5,4,1,2,6]
+TOP=3
+display() -> 5 4 1 2
+displayFullArray() -> 5 4 1 2 6
 --------------------------
 Enter your choice.
 Press 1 : Push to stack
@@ -107,7 +127,21 @@ Press 3 : Peek from stack
 Press 4 : Display stack
 Press 5 : Exit
 
+=============================Queue=====================
+Queue:
+	-> Linear DS
+	-> FIFO
+	-> Example : Queue at ticket counter
+	-> ADT (Abstract Data Type)
+	-> Implementation
+		-> Using array
+		-> Using Linked List
 	
+Basic operation in Queue:
+1. enque(x)
+2. deque()
+3. isEmpty()
+4. isFull()	
 	
 	
 	
