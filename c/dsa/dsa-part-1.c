@@ -27,9 +27,9 @@ Stack:
 		-> Using Linked List
 	
 Basic operation in Stack:
-1. push(x)
-2. pop()
-3. peek()
+1. push(x) - Insert an element at TOP
+2. pop() - Remove an element from TOP
+3. peek() - Return an element from TOP
 4. isEmpty()
 5. isFull()
 
@@ -138,11 +138,135 @@ Queue:
 		-> Using Linked List
 	
 Basic operation in Queue:
-1. enque(x)
-2. deque()
-3. isEmpty()
-4. isFull()	
+1. enqueue(x) - Inserts an element at rear
+2. dequeue() - Removes an element from front
+3. peek() - Return an element from front
+4. isEmpty()
+5. isFull()	
+----------------------------------------
+Implementation of Queue using array:
+------------------------------------
+// Online C compiler to run C program online
+#include<stdio.h>
+#define MAXSIZE 5
+
+int queue[MAXSIZE];
+int rear=-1; // It is an index that points to the last element in the queue. 
+int front=-1; // It is an index that points to the first element in the queue.
+
+void enqueue(int x);
+int dequeue();
+int peek();
+int isEmpty();
+int isFull();
+void display();
+
+int main() {
+    dequeue();
+    peek();
+    enqueue(4);
+    enqueue(2);
+    enqueue(6);
+    dequeue();
+    dequeue();
+    dequeue();
+    //-------
+    dequeue();
+    dequeue();
+    dequeue();
+    
+
+    return 0;
+}
+
+void enqueue(int x){
+	if(isFull()){
+		printf("\nQueue is full.");
+	}else{
+		if(front==-1){
+			front++;
+		}
+		rear++;
+		queue[rear]=x;
+		printf("\n%d is inserted.",x);
+		display();
+	}
 	
-	
+}
+
+int dequeue(){
+	if(isEmpty()){
+		printf("\nQueue is empty.");
+		return -1;
+	}else{
+	    int x = queue[front];
+	    printf("\n%d is removed.",x);
+	    
+	    if(front==rear){ 
+	        front=-1;
+	        rear=-1;;
+	    }else{
+	        front++;
+	        display();
+	    }
+		return x;
+	}
+}
+
+int peek(){
+	if(isEmpty()){
+		printf("\nQueue is empty");
+		return -1;
+	}else{
+		return queue[front];
+	}
+}
+
+// 0(no)-false, 1(yes)-true
+int isFull(){
+	if(rear >= MAXSIZE-1){
+		return 1;
+	}else{
+		return 0;
+	}
+}
+
+// 0(no)-false, 1(yes)-true
+int isEmpty(){
+	if(rear==-1 && front==-1){
+		return 1;
+	}else{
+		return 0;
+	}
+}
+
+void display(){
+    printf("\n Queue:");
+    for(int i=front; i<=rear; i++){
+        printf("%d |",queue[i]);
+    }
+}
+
+
+Enter your choice.
+Press 1 : Insert to queue
+Press 2 : Remove from queue
+Press 3 : Peek from queue
+Press 4 : Display queue
+Press 5 : Exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
