@@ -203,7 +203,49 @@ Q10. Write a program to print english word of all digits in number.
 123 -> One Two Three
 150 -> One Five Zero
 
+Q11. Print the following patterns.
+---------a------
+n=5
+*
+**
+***
+****
+*****
+--------b------
+*****
+****
+***
+**
+*
+--------c-------
+n=4
+   *
+  **
+ ***
+****
+
+---------d------
+    *
+   ***
+  *****
+ *******
+*********
+--------e------
+
+1
+22
+333
+4444
+55555
 
 
+1
+2	3
+4	5	6
+7	8	9	10
+11 	12	13	14	15
+
+
+--
 Q100. Find all combination of 3 digit number using digits from 0 to 9.
 
