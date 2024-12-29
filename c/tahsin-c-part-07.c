@@ -163,7 +163,17 @@ Q.8 Find the sum of a. primary diagonal elements and b. secondary diagonal eleme
 Q.9 Find the sum of two matrices.
 Q.10 Find the product of two matrices.
 
+========= String ===========
+int ari[5]={5,3,1,7,9}; // array of integers
+char arc[5] = {'h','i','1', '2','3'};  // array of characters
 
+String : It is an array of characters that ends with a NULL(\0) character.
+
+char pan[] = "APAPH11446"; // {'A', 'P', 'P', 'H', '0', '0', '3', '6', 'C'};
+char regId[] = "2024JAN0001";
+\0
+\n
+\t
 
 
 
