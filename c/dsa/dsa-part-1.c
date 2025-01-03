@@ -256,9 +256,66 @@ Press 4 : Display queue
 Press 5 : Exit
 
 
+===========================
+1. Implementation of stack using array and structure. 
+define MAXSIZE 100
+typedef struct stack{
+	int data[MAXSIZE]; //array
+	int TOP = -1;
+}stack;
 
+void push(int x, stack s);
+int pop(stack s);
+int peek(stack s);
+void display(stack s);
 
+int main(){
+	stack s1;
+	push(5,s1);
+	push(3,s1);
+	push(8,s1);
+	pop(s1);
+	display(s1);
+	
+	stack s2;
+	push(3,s2);
+	push(9,s2);
+	push(8,s2);
+	pop(s2);
+	display(s2);
 
+}
+
+void push(int x, stack s){
+	if(s.TOP >= MAXSIZE-1){
+		printf("\nStack overflow - Stack is full.\n");
+	}else{
+		s.TOP++;
+		s.data[TOP] = x;
+		printf("\n%d is pushed to stack.",x);
+	}
+}
+
+int pop(stack s){
+	if(s.TOP==-1){
+		printf("\nStack is empty.");
+		return -1; // To denote stack empty
+	}else{
+		int x = s.data[TOP];
+		s.TOP--;
+		printf("\n%d is popped from stack.",x);
+		return x;
+	}
+}
+
+void display(stack s){
+    printf("\n");
+    for(int i=0; i<=s.TOP; i++){
+        printf("%d |",s.data[i]);
+    }
+}
+
+2. Implementation of queue using array and structure. 
 
 
 
