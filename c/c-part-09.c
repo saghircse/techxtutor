@@ -117,6 +117,11 @@ Memory allocation:
 int a; // 4 bytes
 int ar[100]; // 100 * 4 = 400 bytes
 
+int* pa = &a;
+
+unsigned int x=2;
+unsigned int* &x;
+
 
 2. Dynamic memory allocation
 	-> Memory allocated can be changed during runtime.
@@ -125,3 +130,27 @@ int ar[100]; // 100 * 4 = 400 bytes
 		2. calloc()
 		3. free()
 		4. realloc()
+		
+1. malloc(number_of_bytes)
+malloc(7);
+
+int* ptr = (int*)malloc(8);
+float* ptr = (float*)malloc(8);
+
+int* ptr = (int*)malloc(5*sizeof(int));
+2. calloc()
+
+int* ptr = (int*)calloc(5, sizeof(int));
+
+3. free(ptr)
+4. ptr = realloc(ptr, 3*sizeof(int))
+
+
+
+
+
+
+
+
+
+

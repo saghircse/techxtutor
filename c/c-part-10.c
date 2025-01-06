@@ -141,8 +141,25 @@ int main() {
     return 0;
 }
 
+How to rename struture?
+1. 
+typedef struct Student{
+	int roll;
+	char gender;
+	float score;
+} stud;
+
+2. typedef  struct Student stud;
+
+3. Structure pointer
+struct Student s1; // s1 is of type Student
+s1.roll
+
+struct Student* p1; // P1 is Student pointer
+p1->roll;
 
 Q1. Find the student having highest score.
+Q2. Write a program to read and display Employee(id, name, age, salary)
 
 
 

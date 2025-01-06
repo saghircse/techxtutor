@@ -317,7 +317,52 @@ void display(stack s){
 
 2. Implementation of queue using array and structure. 
 
+========================== Linked List ================
+Advantage of array:
+	1. Indexed based - provide random access  O(1)
 
+Disadvantage of Array:
+	1. Fixed size
+	2. Deletion/Insertion at the middle is costly
+	
+----------
+Linked list consist of nodes which linked linearly.
+Advantage of LL:
+	1. Deletion/Insertion at the middle is easy.
+	2. Dynamic size
+DisAdvantage of LL:	
+	1. Access is costly.
+	2. Takes extra memory for storing links/adress along with data.
+
+1. Single Linked List
+	-> Each node has one data part and one link to next node.
+2. Double Linked List
+	-> -> Each node has one data part and two link - one of previous node and and another for next node.
+
+
+Implementation SLL in C:
+-----------------------
+Node(data, link-to-next-node)
+
+struct Node{
+	int data;
+	struct Node* next;
+};
+
+struct Node* nodex=(struct Node*)malloc(sizeof(struct Node));
+
+Operations in LL:
+1. Insert
+	a. beginning
+	b. end
+	c. middle - at position p
+2. Delete
+	a. beginning
+	b. end
+	c. middle - at position p
+3. Traversal
+4. Display
+5. Search
 
 
 
