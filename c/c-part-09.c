@@ -144,8 +144,13 @@ int* ptr = (int*)calloc(5, sizeof(int));
 
 3. free(ptr)
 4. ptr = realloc(ptr, 3*sizeof(int))
+-------------------
+struct Node{
+	int data;
+	struct Node* next;
+};
 
-
+struct Node* pn=(struct Node*)malloc(sizeof(struct Node));
 
 
 

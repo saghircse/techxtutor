@@ -138,7 +138,7 @@ Question-3:
 Write a program to compute the sum of series 1/1! + 1/2! + 1/3! + ..+ 1/n!
 
 Question-4:
-Write a program to compute the sum of series 1^2/1! + 2^2/2! + 3^2/3! + ..+ n^2/n!
+Write a program to compute the sum of series 1/1! + 2/2! + 3/3! + ..+ n/n!
 
 Question-5:
 Write a program to compute the sum of series 1^2/1! - 2^2/2! + 3^2/3! - .. n^2/n!
