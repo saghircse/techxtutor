@@ -258,60 +258,70 @@ Press 5 : Exit
 
 ===========================
 1. Implementation of stack using array and structure. 
-define MAXSIZE 100
+#include <stdio.h>
+#include<stdlib.h>
+#define MAXSIZE 100
 typedef struct stack{
 	int data[MAXSIZE]; //array
-	int TOP = -1;
+	int TOP;
 }stack;
 
-void push(int x, stack s);
-int pop(stack s);
-int peek(stack s);
-void display(stack s);
+void push(int x, stack* s);
+int pop(stack* s);
+int peek(stack* s);
+void display(stack* s);
+stack* createStack();
 
 int main(){
-	stack s1;
-	push(5,s1);
-	push(3,s1);
-	push(8,s1);
-	pop(s1);
-	display(s1);
+	stack* ps1 = createStack();
+	push(5,ps1);
+	push(3,ps1);
+	push(8,ps1);
+	pop(ps1);
+	display(ps1);
 	
-	stack s2;
-	push(3,s2);
-	push(9,s2);
-	push(8,s2);
-	pop(s2);
-	display(s2);
+	stack* ps2 = createStack();;
+	push(3,ps2);
+	push(9,ps2);
+	push(8,ps2);
+	pop(ps2);
+	display(ps2);
 
 }
 
-void push(int x, stack s){
-	if(s.TOP >= MAXSIZE-1){
+stack* createStack(){
+    stack* ps = (stack*)malloc(sizeof(stack));
+	ps->TOP=-1;
+	printf("\n New Stack created=============");
+	return ps;
+}
+
+void push(int x, stack* ps){
+	if(ps->TOP >= MAXSIZE-1){
 		printf("\nStack overflow - Stack is full.\n");
 	}else{
-		s.TOP++;
-		s.data[TOP] = x;
+		ps->TOP++;
+		ps->data[ps->TOP] = x;
 		printf("\n%d is pushed to stack.",x);
 	}
 }
 
-int pop(stack s){
-	if(s.TOP==-1){
+int pop(stack* ps){
+	if(ps->TOP==-1){
 		printf("\nStack is empty.");
 		return -1; // To denote stack empty
 	}else{
-		int x = s.data[TOP];
-		s.TOP--;
+		int x = ps->data[ps->TOP];
+		ps->TOP--;
 		printf("\n%d is popped from stack.",x);
 		return x;
 	}
 }
 
-void display(stack s){
+void display(stack* ps){
     printf("\n");
-    for(int i=0; i<=s.TOP; i++){
-        printf("%d |",s.data[i]);
+    for(int i=0; i<=ps->TOP; i++){
+        printf("%d |",ps->data[i]);
     }
 }
 
@@ -344,10 +354,13 @@ Implementation SLL in C:
 -----------------------
 Node(data, link-to-next-node)
 
-struct Node{
+typedef struct Node{
 	int data;
 	struct Node* next;
-};
+}Node;
+
+Node* HEAD=NULL;
+
 
 struct Node* nodex=(struct Node*)malloc(sizeof(struct Node));
 
@@ -365,7 +378,20 @@ Operations in LL:
 5. Search
 
 
+typedef struct Node{
+	int data;
+	struct Node* next;
+}Node;
 
+Node* HEAD=NULL;
+int main(){
+	Node* n1 = createNode();
+
+	return 0;
+}
+
+Node* createNode(){
+}
 
 
 
