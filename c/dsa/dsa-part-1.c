@@ -385,13 +385,68 @@ typedef struct Node{
 
 Node* HEAD=NULL;
 int main(){
-	Node* n1 = createNode();
+	
+	Node n1;
+	n1.data=5;
+	n1.next=NULL;
+	
+	Node n2;
+	n2.data=8;
+	n2.next=NULL;
+	
+	n1.next = &n2; // connected n1 to n2 (n1->n2)
+	
+	Node n3;
+	n3.data=2;
+	n3.next=NULL;
+	
+	n2.next=&n3; // connected n2 to n3 (n2->n3) => n1 -> n2 -> n3
+	
+	Node n4;
+	n4.data=3;
+	n4.next=NULL;
+	n4.next->&n1; // connected n4 to n1 (n4->n1) => n4 -> n1 -> n2 -> n3
 
 	return 0;
 }
+=====================================
 
-Node* createNode(){
+typedef struct Node{
+	int data;
+	struct Node* next;
+}Node;
+
+Node* HEAD=NULL; // HEAD is a pointer which always points to the 1st node.
+int main(){
+	//Node* p1 = (Node*)malloc(sizeOf(Node));
+	//p1->data = 5;
+	//p1->next=NULL;
+	Node* p1 = createNode(5); // HEAD=p1
+	HEAD = p1;
+	
+	Node* p2 = createNode(8);
+	p1->next = p2; // p1->p2 , HEAD=p1
+	
+	Node* p3 = createNode(3);
+	p2->next=p3; // p1->p2->p3, HEAD=p1
+	
+	Node* p4 = createNode(2);
+	p4->next = p1; // p4->p1->p2->p3, HEAD=p4
+	HEAD = p4;
+	
+	
+	return 0;
 }
+
+Node* createNode(int x){
+	Node* px = (Node*)malloc(sizeOf(Node));
+	px->data = x;
+	px->next=NULL;
+	
+	return px;
+}
+
+
 
 
 
