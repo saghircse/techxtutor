@@ -151,6 +151,8 @@ Recursion Function :
 	-> The function which calls itself again and again until a certain condition is met.
 	-> All the program which can solved using loop can also be solved using recursion.
 	-> All the function calls are stored in stack.
+stack -> LIFO(Last In First Out)
+Queue -> FIFO(First In First Out)
 	
 5! = 5 * 4 * 3 * 2 * 1 = 1 * 2 * 3 * 4 * 5
 
@@ -199,28 +201,3 @@ Stack:
 	-> Stack of plates or books
 	-> Function calls
 	
-	
-
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

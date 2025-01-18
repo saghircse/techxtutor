@@ -160,6 +160,13 @@ p1->roll;
 
 Q1. Find the student having highest score.
 Q2. Write a program to read and display Employee(id, name, age, salary)
+Q3. typedef struct State{
+	char name[10];
+	struct State* eastState;
+	struct State* westState;
+	struct State* northState;
+	struct State* southState;
+}State;
 
 
 

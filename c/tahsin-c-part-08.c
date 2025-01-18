@@ -134,6 +134,52 @@ int fact(int x){
 	}
 	return f;
 }
+================ RECURSION ==============
+Loop : 
+Iterate over a set of instructions agains and again until a certain condition is met.
+while(1==1){} // infinite loop
+for(int i=1;i>=1;i++){} // infinite loop
+
+Recursion Function : 
+	-> The function which calls itself again and again until a certain condition is met.
+	-> All the program which can solved using loop can also be solved using recursion.
+	-> All the function calls are stored in stack.
+stack -> LIFO(Last In First Out)
+Queue -> FIFO(First In First Out)
+
+
+Q1. Factorial of a number using recursion.
+5! = 5*4*3*2*1
+5! = 5*4! = 5*4*3!=5*4*3*2! = 5*4*3*2*1!
+main()
+	->fact(5)
+		-> 5*fact(4)
+				-> 4*fact(3)
+						->3*fact(2)
+								->2*fact(1)
+										->1*fact(0)
+												->1
+
+#include <stdio.h>
+int fact(int i);
+int main() {
+    
+    int f=fact(5);
+    printf("Fact = %d",f);
+    
+    return 0;
+}
+
+int fact(int n){
+
+    if(n==0 || n==1){ // Base condition
+        return 1;
+    }
+    return n*fact(n-1);
+}
+
+Q.2> Program to find the reverse of a number using recursion.
+
 
 
 	
