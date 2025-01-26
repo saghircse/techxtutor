@@ -94,11 +94,14 @@ typedef struct Node{
 Node* createNode(int x);
 void insertAtStart(int x);
 void insertAtEnd(int x);
+void insertAtStartX(int x);
+void insertAtEndX(int x);
 void display();
 void deleteAtStart();
 void deleteAtEnd();
 
 Node* HEAD = NULL;
+Node* TAIL = NULL;
 
 int main() {
     display();
@@ -132,6 +135,28 @@ void insertAtStart(int x){
     HEAD = newx;
 }
 
+void insertAtStartX(int x){
+    Node* newx = createNode(x);
+	if(HEAD==NULL){
+		HEAD = newx;
+		TAIL = newx;
+	}else{
+		newx->next = HEAD;
+		HEAD = newx;
+	}
+}
+
+void insertAtEndX(int x){
+	Node* newx = createNode(x);
+	if(HEAD==NULL){
+		HEAD=newx;
+		TAIL=newx;
+	}else{
+		TAIL->next=newx;
+		TAIL=newx;
+	}
+}
+
 void insertAtEnd(int x){
     Node* newx = createNode(x);
     if(HEAD==NULL){
@@ -154,6 +179,43 @@ void deleteAtStart(){
     }
 }
 
+void deleteAtStartX(){
+    if(HEAD!=NULL){
+        Node* temp = HEAD;
+        HEAD = HEAD->next;
+        free(temp);
+		if(HEAD==NULL) // It means SLL had only 1 node which is deleted now.
+		{
+			TAIL=NULL;
+		}
+    }else{
+        printf("\nCan not delete - list is empty");
+    }
+}
+
+void deleteAtEndX(){
+	    if(HEAD!=NULL){
+        Node* i = HEAD;
+        Node* j = NULL;
+        while(i->next != NULL){
+            j=i;
+            i = i->next;
+        }
+        if(j==NULL){
+            // list had only single node which is deleted now
+            HEAD = NULL;
+			TAIL = NULL;
+        }else{
+            j->next = NULL;
+			TAIL = j;
+        }
+        free(i);
+        
+    }else{
+        printf("\nCan not delete - list is empty");
+    }
+}
+
 void deleteAtEnd(){
     if(HEAD!=NULL){
         Node* i = HEAD;
@@ -163,7 +225,7 @@ void deleteAtEnd(){
             i = i->next;
         }
         if(j==NULL){
-            // list has only single node
+            // list had only single node which is deleted now
             HEAD = NULL;
         }else{
             j->next = NULL;
